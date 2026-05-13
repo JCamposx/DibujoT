@@ -1,16 +1,30 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.DibujoT" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+    <!-- Light theme: warm paper, dark ink, deep teal accent -->
+    <style name="Theme.DibujoT" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/teal_primary</item>
+        <item name="colorPrimaryVariant">@color/teal_dark</item>
+        <item name="colorOnPrimary">@color/paper_warm</item>
+        <item name="colorSecondary">@color/teal_light</item>
+        <item name="colorOnSecondary">@color/teal_dark</item>
+        <item name="colorSurface">@color/paper_warm</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="android:colorBackground">@color/paper</item>
+
+        <item name="android:windowBackground">@color/paper</item>
+        <item name="android:statusBarColor">@color/teal_dark</item>
+        <item name="android:navigationBarColor">@color/paper</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
+
+    <style name="Theme.DibujoT.NoActionBar" parent="Theme.DibujoT" />
+
+    <!-- Toolbar: light text on primary color -->
+    <style name="DibujoT.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/paper_warm</item>
+        <item name="android:textColorSecondary">@color/teal_light</item>
+        <item name="colorControlNormal">@color/paper_warm</item>
+    </style>
+
 </resources>

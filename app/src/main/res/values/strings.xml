@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">DibujoT</string>
+    <string name="drawing_thumbnail">Miniatura del dibujo</string>
+    <string name="send_activity_stub">Pantalla de envío (próximamente)</string>
+    <string name="status_idle">Listo para enviar</string>
+    <string name="status_connecting">Conectando…</string>
+    <string name="status_ready">Conectado — presione Enviar</string>
+    <string name="status_done">¡Listo!</string>
+    <string name="btn_send">Enviar al plotter</string>
+    <string name="error_usb_permission_denied">Permiso USB denegado</string>
+    <string name="error_no_usb_device">No se encontró ningún dispositivo USB</string>
 </resources>

@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Color primitives -->
+    <color name="ink">#FF1D1F20</color>
+    <color name="ink_secondary">#FF4A4E52</color>
+    <color name="ink_muted">#FF8A9199</color>
+    <color name="paper">#FFF7F5F2</color>
+    <color name="paper_warm">#FFFAF8F5</color>
+    <color name="paper_beige">#FFE8E0D5</color>
+
+    <!-- Primary: deep teal -->
+    <color name="teal_primary">#FF2E6B6E</color>
+    <color name="teal_dark">#FF1F4E51</color>
+    <color name="teal_light">#FFCDE4E5</color>
+
+    <!-- Image background (for transparent PNGs) -->
+    <color name="image_bg">#FFF0EDE8</color>
+
+    <!-- Dark mode surfaces -->
+    <color name="dark_canvas">#FF16181A</color>
+    <color name="dark_surface">#FF1E2124</color>
+    <color name="dark_card">#FF272B2F</color>
+    <color name="dark_ink">#FFF0EDE8</color>
+    <color name="dark_ink_secondary">#FFB0ADA8</color>
+    <color name="dark_image_bg">#FF272B2F</color>
+
+    <!-- Legacy (kept for compatibility) -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

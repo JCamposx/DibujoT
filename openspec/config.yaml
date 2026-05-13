@@ -1,0 +1,61 @@
+schema: spec-driven
+
+context: |
+  Project: DibujoT — Academic G-code sender for Robotics class
+  Platform: Android (minSdk 24, targetSdk 36), Kotlin, No Activity template
+  Purpose: Shows gallery of 8 images; user picks one; app sends matching .gcode file line-by-line to Arduino via USB OTG
+  Architecture: Single-module Android app (com.example.dibujot)
+  Testing: JUnit4 (unit), Espresso + AndroidJUnit (instrumented)
+  Build: Gradle KTS, AGP 9.2.1
+
+strict_tdd: true
+
+testing:
+  runner: ./gradlew test
+  instrumented_runner: ./gradlew connectedAndroidTest
+  unit:
+    available: true
+    framework: JUnit4
+    command: ./gradlew test
+  integration:
+    available: true
+    framework: Espresso + AndroidJUnit
+    command: ./gradlew connectedAndroidTest
+  e2e:
+    available: false
+  coverage:
+    available: false
+    command: ""
+  linter:
+    available: false
+    command: ""
+  formatter:
+    available: false
+    command: ""
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Consider USB OTG permission and device attach/detach lifecycle
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+    - Specify G-code protocol details (baud rate, line terminator, flow control)
+  design:
+    - Include sequence diagrams for USB serial communication flows
+    - Document architecture decisions with rationale
+    - Account for Android USB host API constraints
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+    - Separate unit-testable logic from Android framework concerns
+  apply:
+    - Follow existing Kotlin/Android conventions
+    tdd: true
+    test_command: ./gradlew test
+  verify:
+    test_command: ./gradlew test
+    build_command: ./gradlew assembleDebug
+    coverage_threshold: 0
+  archive:
+    - Warn before merging destructive deltas

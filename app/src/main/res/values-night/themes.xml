@@ -1,16 +1,28 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.DibujoT" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+    <!-- Dark theme: deep canvas, layered surfaces, deep teal accent -->
+    <style name="Theme.DibujoT" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/teal_primary</item>
+        <item name="colorPrimaryVariant">@color/teal_dark</item>
+        <item name="colorOnPrimary">@color/dark_ink</item>
+        <item name="colorSecondary">@color/teal_light</item>
+        <item name="colorOnSecondary">@color/teal_dark</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnSurface">@color/dark_ink</item>
+        <item name="android:colorBackground">@color/dark_canvas</item>
+
+        <item name="android:windowBackground">@color/dark_canvas</item>
+        <item name="android:statusBarColor">@color/dark_canvas</item>
+        <item name="android:navigationBarColor">@color/dark_canvas</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
     </style>
+
+    <style name="Theme.DibujoT.NoActionBar" parent="Theme.DibujoT" />
+
+    <style name="DibujoT.Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/dark_ink</item>
+        <item name="android:textColorSecondary">@color/dark_ink_secondary</item>
+        <item name="colorControlNormal">@color/dark_ink</item>
+    </style>
+
 </resources>
