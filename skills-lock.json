@@ -31,6 +31,12 @@
       "skillPath": "plugins/developer-essentials/skills/error-handling-patterns/SKILL.md",
       "computedHash": "824c53fa080765f05862d3ec0ef829aaff9f8d544f9de0039b8fcafa6bc1a899"
     },
+    "interface-design": {
+      "source": "dammyjay93/interface-design",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/interface-design/SKILL.md",
+      "computedHash": "d004c5e5e2e7132e1d64e9c2a339db7f7aaa69053a5c19cddc210dd35dd6fff5"
+    },
     "mobile-android-design": {
       "source": "wshobson/agents",
       "sourceType": "github",
