@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.dibujot"
+    namespace = "edu.robotics.dibujot"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.dibujot"
+        applicationId = "edu.robotics.dibujot"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

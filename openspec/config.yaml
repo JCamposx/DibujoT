@@ -4,7 +4,7 @@ context: |
   Project: DibujoT — Academic G-code sender for Robotics class
   Platform: Android (minSdk 24, targetSdk 36), Kotlin, No Activity template
   Purpose: Shows gallery of 8 images; user picks one; app sends matching .gcode file line-by-line to Arduino via USB OTG
-  Architecture: Single-module Android app (com.example.dibujot)
+  Architecture: Single-module Android app (edu.robotics.dibujot)
   Testing: JUnit4 (unit), Espresso + AndroidJUnit (instrumented)
   Build: Gradle KTS, AGP 9.2.1
 

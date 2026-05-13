@@ -183,7 +183,7 @@ GalleryActivity → [tap image] → SendActivity
 ## Architecture Overview
 
 ```
-com.example.dibujot
+edu.robotics.dibujot
 ├── data/
 │   ├── DrawingItem.kt              // data class
 │   ├── DrawingRepository.kt        // hardcoded list of 8
@@ -211,7 +211,7 @@ com.example.dibujot
 ## Affected Areas
 
 All files are **new** — no existing source to modify:
-- `app/src/main/java/com/example/dibujot/` — all source
+- `app/src/main/java/edu/robotics/dibujot/` — all source
 - `app/src/main/assets/gcode/` — 8 gcode files to add
 - `app/src/main/res/drawable/` — 8 thumbnail images
 - `app/src/main/AndroidManifest.xml` — add activities, USB intent filters, permissions

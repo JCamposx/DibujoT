@@ -49,12 +49,12 @@ The SerialPort interface is the critical testability boundary — all logic abov
 
 | Area | Impact | Description |
 |------|--------|-------------|
-| `app/src/main/java/com/example/dibujot/data/` | New | DrawingItem, DrawingRepository, GcodeLoader, AssetGcodeLoader |
-| `app/src/main/java/com/example/dibujot/serial/` | New | SerialPort interface, UsbSerialPort, FakeSerialPort |
-| `app/src/main/java/com/example/dibujot/gcode/` | New | GcodeParser, GcodeSender |
-| `app/src/main/java/com/example/dibujot/ui/gallery/` | New | GalleryActivity, GalleryAdapter |
-| `app/src/main/java/com/example/dibujot/ui/send/` | New | SendActivity, SendViewModel, UiState |
-| `app/src/main/java/com/example/dibujot/util/` | New | UsbPermissionHelper |
+| `app/src/main/java/edu/robotics/dibujot/data/` | New | DrawingItem, DrawingRepository, GcodeLoader, AssetGcodeLoader |
+| `app/src/main/java/edu/robotics/dibujot/serial/` | New | SerialPort interface, UsbSerialPort, FakeSerialPort |
+| `app/src/main/java/edu/robotics/dibujot/gcode/` | New | GcodeParser, GcodeSender |
+| `app/src/main/java/edu/robotics/dibujot/ui/gallery/` | New | GalleryActivity, GalleryAdapter |
+| `app/src/main/java/edu/robotics/dibujot/ui/send/` | New | SendActivity, SendViewModel, UiState |
+| `app/src/main/java/edu/robotics/dibujot/util/` | New | UsbPermissionHelper |
 | `app/src/main/res/drawable/` | New | 8 image thumbnails |
 | `app/src/main/assets/gcode/` | New | 8 `.gcode` files |
 | `app/build.gradle.kts` | Modified | Add usb-serial, coroutines, lifecycle deps |
