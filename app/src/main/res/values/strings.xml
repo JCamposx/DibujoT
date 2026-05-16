@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">DibujoT</string>
+    <string name="gallery_subtitle">Selecciona un dibujo</string>
     <string name="drawing_thumbnail">Miniatura del dibujo</string>
     <string name="send_activity_stub">Pantalla de envío (próximamente)</string>
     <string name="status_idle">Listo para enviar</string>
