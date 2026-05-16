@@ -1,10 +1,11 @@
 package edu.robotics.dibujot.ui.gallery
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -25,16 +26,19 @@ class GalleryActivity : AppCompatActivity() {
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
         setContentView(R.layout.activity_gallery)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        ViewCompat.setOnApplyWindowInsetsListener(toolbar) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(v.paddingLeft, systemBars.top, v.paddingRight, v.paddingBottom)
+        val statusBarBg = findViewById<View>(R.id.status_bar_bg)
+        ViewCompat.setOnApplyWindowInsetsListener(statusBarBg) { v, insets ->
+            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+            v.layoutParams.height = statusBarHeight
+            v.requestLayout()
             insets
         }
 
         val recyclerView: RecyclerView = findViewById(R.id.rv_gallery)
-        recyclerView.layoutManager = GridLayoutManager(this, COLUMN_COUNT)
+        // Use 3 columns in landscape for better use of wider screen space
+        val isLandscape = resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
+        val columns = if (isLandscape) COLUMN_COUNT_LANDSCAPE else COLUMN_COUNT_PORTRAIT
+        recyclerView.layoutManager = GridLayoutManager(this, columns)
         recyclerView.adapter = adapter
 
         adapter.submitList(DrawingRepository.getAll())
@@ -48,6 +52,7 @@ class GalleryActivity : AppCompatActivity() {
     }
 
     companion object {
-        private const val COLUMN_COUNT = 2
+        private const val COLUMN_COUNT_PORTRAIT = 2
+        private const val COLUMN_COUNT_LANDSCAPE = 3
     }
 }

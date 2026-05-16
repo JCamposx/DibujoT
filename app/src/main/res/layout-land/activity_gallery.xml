@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Landscape variant: 3-column grid with horizontal padding -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,14 +13,14 @@
         android:layout_height="0dp"
         android:background="@color/teal_dark" />
 
-    <!-- Gallery grid with horizontal padding so cards don't touch screen edges -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_gallery"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingHorizontal="12dp"
-        android:paddingTop="12dp"
-        android:paddingBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingHorizontal="48dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="12dp"
         android:clipToPadding="false" />
 
 </LinearLayout>

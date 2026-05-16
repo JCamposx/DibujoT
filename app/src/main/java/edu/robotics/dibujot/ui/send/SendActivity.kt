@@ -16,7 +16,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -67,13 +66,11 @@ class SendActivity : AppCompatActivity() {
         WindowCompat.getInsetsController(window, window.decorView).isAppearanceLightStatusBars = false
         setContentView(R.layout.activity_send)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
-        ViewCompat.setOnApplyWindowInsetsListener(toolbar) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(v.paddingLeft, systemBars.top, v.paddingRight, v.paddingBottom)
+        val statusBarBg = findViewById<View>(R.id.status_bar_bg)
+        ViewCompat.setOnApplyWindowInsetsListener(statusBarBg) { v, insets ->
+            val statusBarHeight = insets.getInsets(WindowInsetsCompat.Type.statusBars()).top
+            v.layoutParams.height = statusBarHeight
+            v.requestLayout()
             insets
         }
 
@@ -103,11 +100,6 @@ class SendActivity : AppCompatActivity() {
         }
 
         observeViewModel()
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        finish()
-        return true
     }
 
     override fun onDestroy() {
