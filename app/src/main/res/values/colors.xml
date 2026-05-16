@@ -8,10 +8,10 @@
     <color name="paper_warm">#FFFAF8F5</color>
     <color name="paper_beige">#FFE8E0D5</color>
 
-    <!-- Primary: deep teal -->
-    <color name="teal_primary">#FF2E6B6E</color>
-    <color name="teal_dark">#FF1F4E51</color>
-    <color name="teal_light">#FFCDE4E5</color>
+    <!-- Primary: deep indigo navy -->
+    <color name="teal_primary">#FF1A3A5C</color>
+    <color name="teal_dark">#FF0F2740</color>
+    <color name="teal_light">#FFC5D5E8</color>
 
     <!-- Image background (for transparent PNGs) -->
     <color name="image_bg">#FFF0EDE8</color>
